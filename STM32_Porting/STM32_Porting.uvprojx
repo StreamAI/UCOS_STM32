@@ -7,7 +7,7 @@
 
   <Targets>
     <Target>
-      <TargetName>UCOS_Porting</TargetName>
+      <TargetName>STM32_Porting</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <pCCUsed>5060183::V5.06 update 2 (build 183)::ARMCC</pCCUsed>
@@ -48,7 +48,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\Objects\</OutputDirectory>
-          <OutputName>UCOS_Porting</OutputName>
+          <OutputName>STM32_Porting</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
@@ -334,7 +334,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\CORE;.\STM32F10x_FWLib\inc;.\USER;.\uCOSIII\Source;.\uCOSIII\Ports;.\uCOSIII\Config;.\uCOSIII\uC-CPU;.\uCOSIII\uC-LIB</IncludePath>
+              <IncludePath>.\CORE;.\STM32F10x_FWLib\inc;.\USER</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -522,180 +522,10 @@
               <FileType>1</FileType>
               <FilePath>.\USER\stm32f10x_it.c</FilePath>
             </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>UCOSIII_Source</GroupName>
-          <Files>
             <File>
-              <FileName>os_cfg_app.c</FileName>
+              <FileName>main.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\uCOSIII\Source\os_cfg_app.c</FilePath>
-            </File>
-            <File>
-              <FileName>os_core.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\uCOSIII\Source\os_core.c</FilePath>
-            </File>
-            <File>
-              <FileName>os_dbg.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\uCOSIII\Source\os_dbg.c</FilePath>
-            </File>
-            <File>
-              <FileName>os_flag.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\uCOSIII\Source\os_flag.c</FilePath>
-            </File>
-            <File>
-              <FileName>os_int.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\uCOSIII\Source\os_int.c</FilePath>
-            </File>
-            <File>
-              <FileName>os_mem.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\uCOSIII\Source\os_mem.c</FilePath>
-            </File>
-            <File>
-              <FileName>os_msg.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\uCOSIII\Source\os_msg.c</FilePath>
-            </File>
-            <File>
-              <FileName>os_mutex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\uCOSIII\Source\os_mutex.c</FilePath>
-            </File>
-            <File>
-              <FileName>os_pend_multi.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\uCOSIII\Source\os_pend_multi.c</FilePath>
-            </File>
-            <File>
-              <FileName>os_prio.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\uCOSIII\Source\os_prio.c</FilePath>
-            </File>
-            <File>
-              <FileName>os_q.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\uCOSIII\Source\os_q.c</FilePath>
-            </File>
-            <File>
-              <FileName>os_sem.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\uCOSIII\Source\os_sem.c</FilePath>
-            </File>
-            <File>
-              <FileName>os_stat.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\uCOSIII\Source\os_stat.c</FilePath>
-            </File>
-            <File>
-              <FileName>os_task.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\uCOSIII\Source\os_task.c</FilePath>
-            </File>
-            <File>
-              <FileName>os_tick.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\uCOSIII\Source\os_tick.c</FilePath>
-            </File>
-            <File>
-              <FileName>os_time.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\uCOSIII\Source\os_time.c</FilePath>
-            </File>
-            <File>
-              <FileName>os_tmr.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\uCOSIII\Source\os_tmr.c</FilePath>
-            </File>
-            <File>
-              <FileName>os_var.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\uCOSIII\Source\os_var.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>UCOSIII_Port</GroupName>
-          <Files>
-            <File>
-              <FileName>os_cpu_a.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\uCOSIII\Ports\os_cpu_a.s</FilePath>
-            </File>
-            <File>
-              <FileName>os_cpu_c.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\uCOSIII\Ports\os_cpu_c.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>UCOSIII_Config</GroupName>
-          <Files>
-            <File>
-              <FileName>app.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\uCOSIII\Config\app.c</FilePath>
-            </File>
-            <File>
-              <FileName>os_app_hooks.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\uCOSIII\Config\os_app_hooks.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>UCOSIII_CPU</GroupName>
-          <Files>
-            <File>
-              <FileName>cpu_a.asm</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\uCOSIII\uC-CPU\cpu_a.asm</FilePath>
-            </File>
-            <File>
-              <FileName>cpu_c.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\uCOSIII\uC-CPU\cpu_c.c</FilePath>
-            </File>
-            <File>
-              <FileName>cpu_core.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\uCOSIII\uC-CPU\cpu_core.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>UCOSIII_LIB</GroupName>
-          <Files>
-            <File>
-              <FileName>lib_ascii.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\uCOSIII\uC-LIB\lib_ascii.c</FilePath>
-            </File>
-            <File>
-              <FileName>lib_math.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\uCOSIII\uC-LIB\lib_math.c</FilePath>
-            </File>
-            <File>
-              <FileName>lib_mem.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\uCOSIII\uC-LIB\lib_mem.c</FilePath>
-            </File>
-            <File>
-              <FileName>lib_str.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\uCOSIII\uC-LIB\lib_str.c</FilePath>
-            </File>
-            <File>
-              <FileName>lib_mem_a.asm</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\uCOSIII\uC-LIB\lib_mem_a.asm</FilePath>
+              <FilePath>.\USER\main.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -36,7 +36,7 @@
 */
 
 #include <includes.h>
-
+#include <app_cfg.h>
 /*
 *********************************************************************************************************
 *                                            LOCAL DEFINES
@@ -148,7 +148,9 @@ static  void  AppTaskStart (void *p_arg)
     //BSP_Init();                                                 /* Initialize BSP functions                             */
     CPU_Init();
 	
-    cpu_clk_freq = BSP_CPU_ClkFreq();				                     /* Determine SysTick reference freq.                    */
+		RCC_ClocksTypeDef rcc_clocks;
+		RCC_GetClocksFreq(&rcc_clocks);
+    cpu_clk_freq = rcc_clocks.HCLK_Frequency;				             /* Determine SysTick reference freq.                    */
     cnts = cpu_clk_freq / (CPU_INT32U)OSCfg_TickRate_Hz;        /* Determine nbr SysTick increments                     */
     OS_CPU_SysTickInit(cnts);                                   /* Init uC/OS periodic time src (SysTick).              */
 

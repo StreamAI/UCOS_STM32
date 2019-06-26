@@ -18,9 +18,11 @@
 
 《[操作系统---存储管理与虚拟内存](https://blog.csdn.net/m0_37621078/article/details/91453786)》
 
-## 6. System Startup and Porting:
+## 6. System Startup and Firmware Porting:
 
-《[操作系统---系统启动与移植](https://blog.csdn.net/m0_37621078/article/details/92799772)》
+《[操作系统---系统启动与固件移植](https://blog.csdn.net/m0_37621078/article/details/92799772)》
 
+## 7. UCOS System Porting:
 
+《[操作系统---UCOS系统移植](https://blog.csdn.net/m0_37621078/article/details/93783606)》
 
